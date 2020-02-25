@@ -42,6 +42,10 @@ function modules() {
     // Font Awesome CSS
     var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/**/*')
         .pipe(gulp.dest('./dist/css/fontawesome-free/css'));
+
+        // magnigic pop up css
+        var magnific = gulp.src('node_modules/magnific-popup/dist/magnific-popup.css')
+            .pipe(gulp.dest('./dist/css'));
     // Font Awesome Webfonts
     var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
         .pipe(gulp.dest('./dist/css/fontawesome-free/webfonts'));
