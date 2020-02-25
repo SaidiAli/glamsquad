@@ -1,0 +1,22 @@
+#start-carousel {
+    width: 100%;
+}
+
+#testimonials {
+    width: 80%;
+
+    .testimonial-img-box {
+        width: 50%;
+        height: 50%;
+
+        .testimonial-img {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+        }
+
+        .testimonial-review {
+            width: 16rem;
+        }
+    }
+}

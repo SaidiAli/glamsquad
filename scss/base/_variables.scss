@@ -1,0 +1,59 @@
+// Variables
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:600|Montserrat&display=swap');
+// Set custom colors
+$dark-blue: #1c2331 !default;
+$dark-blue-light: #2c3e50 !default;
+$black: #000000 !default;
+$black-light: #191919 !default;
+$red-accent:   #ff1744 !default;
+$light-pink: #fce4ec;
+
+// Override Bootstrap primary and secondary colors
+$primary: $light-pink !default;
+$secondary: darken($primary, 10%) !default;
+
+// Override Bootstrap font variables
+$font-family-sans-serif: "Montserrat",
+// -apple-system,
+// BlinkMacSystemFont,
+// "Segoe UI",
+// Roboto,
+// "Helvetica Neue",
+// Arial,
+// "Noto Sans",
+// sans-serif,
+// "Apple Color Emoji",
+// "Segoe UI Emoji",
+// "Segoe UI Symbol",
+// 'Noto Color Emoji' !default;
+;
+$headings-font-family:'Playfair Display SC', serif,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+'Noto Color Emoji' !default;
+$headings-font-weight: 700 !default;
+
+$font-montserat: "Montserrat", ;
+$font-quote: "Dancing Script", ;
+
+// Override Bootstrap border variables
+$border-width: 0.125rem !default;
+$border-radius: 0.5rem !default;
+$border-radius-lg: 0.75rem !default;
+$border-radius-sm: 0.25rem !default;
+
+// Override Bootstrap input/button variables
+$input-btn-border-width: $border-width !default;
+
+// Override Bootstrap modal variables
+$modal-inner-padding: 4rem 1rem !default;
+$modal-content-border-width: 0 !default;

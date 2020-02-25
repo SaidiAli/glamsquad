@@ -1,0 +1,20 @@
+// Styling for the gallery section
+#image-gallery {
+  .container-fluid {
+    max-width: 1920px;
+    .portfolio-box {
+      position: relative;
+      display: block;
+    }
+  }
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

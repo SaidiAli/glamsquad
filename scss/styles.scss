@@ -1,0 +1,37 @@
+// Import variables (overrides Bootstrap defaults)
+@import "base/_variables.scss";
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Import base styles
+@import "base/_page.scss";
+
+// Import components styles
+@import "components/_divider.scss";
+@import "components/_buttons.scss";
+@import "components/_carousel.scss";
+@import "components/_images.scss";
+
+// Import layout styles
+@import "layout/_navbar.scss";
+@import "layout/_masthead.scss";
+@import "layout/_portfolio.scss";
+@import "layout/_contact.scss";
+@import "layout/_footer.scss";
+
+.map-responsive {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
