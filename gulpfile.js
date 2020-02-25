@@ -38,22 +38,22 @@ function clean() {
 function modules() {
     // Bootstrap JS
     var bootstrapJS = gulp.src('./node_modules/bootstrap/dist/js/*')
-        .pipe(gulp.dest('./vendor/bootstrap/js'));
+        .pipe(gulp.dest('./dist/js/bootstrap/js'));
     // Font Awesome CSS
     var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/**/*')
-        .pipe(gulp.dest('./vendor/fontawesome-free/css'));
+        .pipe(gulp.dest('./dist/css/fontawesome-free/css'));
     // Font Awesome Webfonts
     var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
-        .pipe(gulp.dest('./vendor/fontawesome-free/webfonts'));
+        .pipe(gulp.dest('./dist/css/fontawesome-free/webfonts'));
     // jQuery Easing
     var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
-        .pipe(gulp.dest('./vendor/jquery-easing'));
+        .pipe(gulp.dest('./dist/js'));
     // jQuery
     var jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-        .pipe(gulp.dest('./vendor/jquery'));
+        .pipe(gulp.dest('./dist/js'));
     return merge(bootstrapJS, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing);
 }
 
@@ -85,7 +85,8 @@ function js() {
     return gulp
         .src([
       './js/*.js',
-      '!./js/*.min.js'
+      '!./js/*.min.js',
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
     ])
         .pipe(uglify())
         .pipe(rename({
