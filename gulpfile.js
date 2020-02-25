@@ -71,12 +71,12 @@ function css() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest("./css"))
+        .pipe(gulp.dest("./dist/css"))
         .pipe(rename({
             suffix: ".min"
         }))
         .pipe(cleanCSS())
-        .pipe(gulp.dest("./css"))
+        .pipe(gulp.dest("./dist/css"))
         .pipe(browsersync.stream());
 }
 
@@ -91,8 +91,15 @@ function js() {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./js'))
+        .pipe(gulp.dest('./dist/js'))
         .pipe(browsersync.stream());
+}
+
+// html task
+function html() {
+    return gulp
+        .src('./*html')
+    .pipe(gulp.dest('./dist'));
 }
 
 // Watch files
@@ -104,7 +111,7 @@ function watchFiles() {
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(vendor, gulp.parallel(css, js, html));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
