@@ -58,7 +58,7 @@ function modules() {
       '!./node_modules/jquery/dist/core.js'
     ])
         .pipe(gulp.dest('./dist/js'));
-    return merge(bootstrapJS, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing);
+    return merge(bootstrapJS, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing, magnific);
 }
 
 // CSS task
