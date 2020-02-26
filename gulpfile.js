@@ -29,18 +29,18 @@ function browserSyncReload(done) {
     done();
 }
 
-// Clean vendor
-function clean() {
-    return del(["./vendor/"]);
-}
+// // Clean vendor
+// function clean() {
+//     return del(["./vendor/"]);
+// }
 
 // Bring third party dependencies from node_modules into vendor directory
 function modules() {
     // Bootstrap JS
-    var bootstrapJS = gulp.src('./node_modules/bootstrap/dist/js/*')
-        .pipe(gulp.dest('./dist/js/bootstrap/js'));
+    var bootstrapJS = gulp.src('./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+        .pipe(gulp.dest('./dist/js/bootstrap'));
     // Font Awesome CSS
-    var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/**/*')
+    var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/all.min.css')
         .pipe(gulp.dest('./dist/css/fontawesome-free/css'));
 
         // magnigic pop up css
@@ -50,14 +50,15 @@ function modules() {
     var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
         .pipe(gulp.dest('./dist/css/fontawesome-free/webfonts'));
     // jQuery Easing
-    var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
+    var jqueryEasing = gulp.src('./node_modules/jquery.easing/jquery.easing.min.js')
         .pipe(gulp.dest('./dist/js'));
     // jQuery
     var jquery = gulp.src([
-      './node_modules/jquery/dist/*',
+      './node_modules/jquery/dist/jquery.min.js',
       '!./node_modules/jquery/dist/core.js'
     ])
         .pipe(gulp.dest('./dist/js'));
+
     return merge(bootstrapJS, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing, magnific);
 }
 
@@ -115,15 +116,15 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js, html));
+const dist = gulp.series(modules);
+const build = gulp.series(dist, gulp.parallel(css, js, html));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
 exports.js = js;
-exports.clean = clean;
-exports.vendor = vendor;
+// exports.clean = clean;
+exports.dist = dist;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;

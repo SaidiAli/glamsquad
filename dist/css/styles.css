@@ -10596,7 +10596,7 @@ html {
 }
 
 .parallax-cover {
-  background-image: url("../../assets/img/lisa-edit.jpg");
+  background-image: url("../../assets/img/makeupart.jpeg");
   height: 30vh;
   background-attachment: fixed;
   background-size: cover;
@@ -10625,7 +10625,7 @@ html {
 }
 
 .parallax-cover-home {
-  background-image: url("../../assets/img/lisa-2.jpg");
+  background-image: url("../../assets/img/makeupart.jpeg");
   height: 100vh;
   position: relative;
   background-attachment: fixed;
