@@ -10599,7 +10599,7 @@ html {
   background-image: url("../../assets/img/makeupart.jpeg");
   height: 30vh;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -10629,7 +10629,7 @@ html {
   height: 100vh;
   position: relative;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
