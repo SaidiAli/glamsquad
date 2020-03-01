@@ -10634,14 +10634,6 @@ html {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 767.98px) {
-  .parallax-cover-home {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/55eef42ae4b01232c2a1ec40/1481579216801-BOS0HL8W7MIBDUYU8672/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/EBC_1236copy.jpg");
-    min-height: 100vh;
-    overflow: hidden;
-  }
-}
-
 #findMe {
   background-color: #f7b6cc;
 }
