@@ -41,8 +41,8 @@ html {
   // text-align: center;
 }
 
-.parallax-cover img{
-  // background-image: url('../assets/img/makeupart2.jpeg');
+.parallax-cover{
+  background-image: url('../assets/img/makeupart2.jpeg');
   height: 30vh;
   background-attachment: fixed;
   background-size: cover;
@@ -70,7 +70,7 @@ html {
   z-index: 10;
 }
 
-.parallax-cover-home img {
+.parallax-cover-home {
   background-image: url('../assets/img/makeupart2.jpeg');
   height: 100vh;
   position: relative;
