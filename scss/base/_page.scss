@@ -199,3 +199,9 @@ html {
   }
 }
 
+@include media-breakpoint-down(sm) {
+  .parallax-cover-home{
+    background-image: url('../assets/img/makeupart-min2.jpeg');
+  }
+}
+

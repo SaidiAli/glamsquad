@@ -10753,6 +10753,12 @@ html {
   }
 }
 
+@media (max-width: 767.98px) {
+  .parallax-cover-home {
+    background-image: url("../assets/img/makeupart-min2.jpeg");
+  }
+}
+
 .divider-custom {
   margin: 1.25rem 0 1.5rem;
   width: 100%;
