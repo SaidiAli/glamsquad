@@ -10635,7 +10635,7 @@ html {
 }
 
 @media (max-width: 767.98px) {
-  .parallax-cover-home .parallax-cover-home {
+  .parallax-cover-home {
     background-image: url("../assets/img/makeupart2.jpeg");
   }
 }
